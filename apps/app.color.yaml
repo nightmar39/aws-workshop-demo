@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: color-dev
+  labels:
+    app: color-dev
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  namespace: color-dev
+  destination:
+    name: arn-aws-eks-us-east-2-336151728602-cluster-managed-test 
+  project: default
+  source:
+    path: ./color/overlays/dev
+    repoURL: https://github.com/nightmar39/aws-workshop-demo.git
+    targetRevision: main
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
