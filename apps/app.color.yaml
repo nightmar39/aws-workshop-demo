@@ -8,7 +8,8 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    name: arn-aws-eks-us-east-2-336151728602-cluster-managed-test 
+    name: arn-aws-eks-us-east-2-336151728602-cluster-managed-test
+    namespace: color 
   project: default
   source:
     path: ./color/overlays/dev
