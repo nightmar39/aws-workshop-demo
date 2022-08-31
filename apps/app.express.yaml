@@ -9,7 +9,7 @@ metadata:
 spec:
   destination:
     name: arn-aws-eks-us-east-2-336151728602-cluster-managed-test
-    namespace: color 
+    namespace: csdp-salesdemo-dev 
   project: default
   source:
     path: ./express/overlays/dev
