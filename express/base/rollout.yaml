@@ -33,7 +33,6 @@ spec:
       analysis:
         templates:
         - templateName: pass-always
-        - templateName: mixed-tests
         startingStep: 1
       steps:
         - setWeight: 25
